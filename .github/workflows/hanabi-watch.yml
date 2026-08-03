@@ -2,8 +2,8 @@ name: Hanabi Website Watch
 
 on:
   schedule:
-    # 每小時第 17 分鐘執行一次，避開 GitHub Actions 整點尖峰
-    - cron: "17 * * * *"
+    # 每小時第 23 分鐘執行一次，避開 GitHub Actions 整點尖峰
+    - cron: "23 * * * *"
   workflow_dispatch: {} # 允許手動在 GitHub 網頁上點一下立刻執行測試
 
 permissions:
