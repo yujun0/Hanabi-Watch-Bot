@@ -1,9 +1,6 @@
-name: Hanabi Website Watch (Scheduled)
+name: Hanabi Website Watch
 
 on:
-  schedule:
-    # 暫時每 5 分鐘執行一次，用來確認 GitHub 已成功註冊排程
-    - cron: "*/5 * * * *"
   workflow_dispatch: {} # 允許手動在 GitHub 網頁上點一下立刻執行測試
 
 permissions:
