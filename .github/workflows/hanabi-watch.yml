@@ -2,12 +2,12 @@ name: Hanabi Website Watch
 
 on:
   schedule:
-    # UTC 時間，對應台灣時間 (UTC+8) 早上 9:00 與晚上 18:00
-    - cron: '0 1,10 * * *'
-  workflow_dispatch: {}   # 允許手動在 GitHub 網頁上點一下立刻執行測試
+    # 每小時整點執行一次
+    - cron: "0 * * * *"
+  workflow_dispatch: {} # 允許手動在 GitHub 網頁上點一下立刻執行測試
 
 permissions:
-  contents: write   # 需要寫入權限才能把最新快照 commit 回 repo
+  contents: write # 需要寫入權限才能把最新快照 commit 回 repo
 
 jobs:
   check:
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4
