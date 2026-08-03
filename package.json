@@ -1,0 +1,16 @@
+{
+  "name": "hanabi-watch-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "dev": "wrangler dev --test-scheduled",
+    "dry-run": "wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "wrangler": "latest"
+  }
+}
